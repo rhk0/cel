@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaSpinner } from "react-icons/fa";
 import { MdArrowForwardIos } from "react-icons/md";
+import video from "../../assets/video.mp4"
 
 const HeroSection = () => {
   const [stage, setStage] = useState(0);
@@ -60,25 +61,25 @@ const HeroSection = () => {
       {stage === 2 && (
         <>
           {/* Background Video */}
-          <iframe
+          <video
             className="relative inset-0 w-full h-full"
-            frameBorder="0"
-            controls autoplay
-            allowFullScreen
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            title="Hero Video"
-            src="https://www.youtube.com/embed/qnZAA3ZpGyk?controls=0&rel=0&playsinline=1&autoplay=1&mute=1&loop=1&playlist=qnZAA3ZpGyk"
+            autoPlay
+            muted
+            loop
+            playsInline
             style={{
               position: "absolute",
               top: "0",
               left: "0",
-              // Ensure full height of the viewport
-              objectFit: "cover", // Covers full screen
+              objectFit: "cover", // Ensures the video covers the entire screen
               zIndex: "-1", // Keeps the video in the background
               pointerEvents: "none", // Prevents interactions
             }}
-          ></iframe>
+          >
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
 
           {/* Overlay Content */}
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">

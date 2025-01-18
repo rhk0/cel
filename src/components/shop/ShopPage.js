@@ -1,18 +1,17 @@
 import React from "react";
 import { FaEye, FaRegHeart } from "react-icons/fa";
 import { HiRefresh } from "react-icons/hi";
-import { RiShoppingBagLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const products = [
   {
     id: 1,
     name: "Rose-Clover Pendant",
-    price: "₹2,600.00",
+    price: "₹7,400.00",
     sold: 0,
     available: 1,
     image:
-      "https://zoci.in/wp-content/uploads/2024/08/P02047-scaled-980x980.webp", // Replace with actual image path
+      "https://zoci.in/wp-content/uploads/2024/08/B03392-scaled-980x980.webp", // Replace with actual image path
   },
   {
     id: 2,
@@ -21,7 +20,7 @@ const products = [
     sold: 0,
     available: 1,
     image:
-      "https://zoci.in/wp-content/uploads/2024/08/B03070-scaled-980x980.webp", // Replace with actual image path
+      "https://zoci.in/wp-content/uploads/2024/08/P02546-1-scaled-980x980.webp", // Replace with actual image path
   },
   {
     id: 3,
@@ -30,7 +29,7 @@ const products = [
     sold: 0,
     available: 1,
     image:
-      "https://zoci.in/wp-content/uploads/2024/08/R02416-scaled-980x980.webp", // Replace with actual image path
+      "https://zoci.in/wp-content/uploads/2024/08/R03551_1-scaled-980x980.webp", // Replace with actual image path
   },
   {
     id: 4,
@@ -39,7 +38,7 @@ const products = [
     sold: 0,
     available: 5,
     image:
-      "https://zoci.in/wp-content/uploads/2024/08/P02047-scaled-980x980.webp", // Replace with actual image path
+      "https://zoci.in/wp-content/uploads/2024/08/E15830-scaled-980x980.webp", // Replace with actual image path
   },
   {
     id: 1,
@@ -48,7 +47,7 @@ const products = [
     sold: 0,
     available: 6,
     image:
-      "https://zoci.in/wp-content/uploads/2024/08/P02047-scaled-980x980.webp", // Replace with actual image path
+      "https://zoci.in/wp-content/uploads/2024/08/E17039-scaled-980x980.webp", // Replace with actual image path
   },
   {
     id: 7,
@@ -57,7 +56,7 @@ const products = [
     sold: 0,
     available: 1,
     image:
-      "https://zoci.in/wp-content/uploads/2024/08/P02047-scaled-980x980.webp", // Replace with actual image path
+      "https://zoci.in/wp-content/uploads/2024/08/E19091-scaled-980x980.webp", // Replace with actual image path
   },
   {
     id: 8,
@@ -66,7 +65,7 @@ const products = [
     sold: 0,
     available: 1,
     image:
-      "https://zoci.in/wp-content/uploads/2024/08/P02047-scaled-980x980.webp", // Replace with actual image path
+      "https://zoci.in/wp-content/uploads/2024/08/P00942-scaled-980x980.webp", // Replace with actual image path
   },
   {
     id: 9,
@@ -75,7 +74,7 @@ const products = [
     sold: 0,
     available: 1,
     image:
-      "https://zoci.in/wp-content/uploads/2024/08/P02047-scaled-980x980.webp", // Replace with actual image path
+      "https://zoci.in/wp-content/uploads/2024/08/E16099-scaled-980x980.webp", // Replace with actual image path
   },
 ];
 
@@ -90,16 +89,16 @@ const ProductCard = ({ product }) => (
       />
 
       {/* Heart Icon - Always Visible */}
-      <button className="absolute top-3 right-3 bg-[#214344] text-[#f0d5a0] p-1 rounded-full">
+      <button className="absolute top-3 right-3 bg-[#214344] text-[#f0d5a0] p-2 rounded-full">
         <FaRegHeart />
       </button>
 
       {/* Other Icons - Visible on Hover */}
-      <div className="absolute top-12 right-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col">
+      <div className="absolute top-12 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col">
         {/* Eye Icon */}
 
         {/* Reload Icon */}
-        <button className="bg-[#214344] p-2 rounded-full text-[#f0d5a0] shadow-md hover:bg-[#214344]">
+        <button className="bg-[#214344] p-2 mb-1 rounded-full text-[#f0d5a0] shadow-md hover:bg-[#214344]">
           <HiRefresh />
         </button>
         <button className="bg-[#214344] p-2 rounded-full text-[#f0d5a0] shadow-md hover:bg-[#214344]">
@@ -133,7 +132,7 @@ const ProductCard = ({ product }) => (
   </div>
 );
 
-const App = () => (
+const ShopPage = () => (
   <div className="bg-[rgb(239 231 223)]  ">
     <div className="flex flex-col items-start mb-10 px-6 mt-10 ml-5" >
       <h1 className="text-sm font-semibold flex items-center">
@@ -144,27 +143,29 @@ const App = () => (
       </h1>
     </div>
     <div className="bg-[#EFE7DF] min-h-screen p-8">
-      <div className="mb-6">
-        <span className="text-[#223D38]  text-sm">Fast Filters:</span>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center px-6 justify-center mb-10">
-          <button className="bg-[#223D38] text-orange-200 py-1 px-1 rounded-full text-sm hover:bg-orange-200 hover:text-white transition duration-500 text-center">
-            NEW ARRIVAL
-          </button>
-          <button className="bg-[#223D38] text-orange-200 py-1 px-1 rounded-full text-sm hover:bg-orange-200 hover:text-white transition duration-500 text-center">
-            BEST SELLERS
-          </button>
-          <button className="bg-[#223D38] text-orange-200 py-1 px-1 rounded-full text-sm hover:bg-orange-200 hover:text-white transition duration-500 text-center">
-            TRENDING
-          </button>
-          <button className="bg-[#223D38] text-orange-200 py-1 px-1 rounded-full text-sm hover:bg-orange-200 hover:text-white transition duration-500 text-center">
-            MEN'S
-          </button>
-          <button className="bg-[#223D38] text-orange-200 py-1 px-1 rounded-full text-sm hover:bg-orange-200 hover:text-white transition duration-500 text-center">
-            GIFTS
-          </button>
+      <div className="mb-6 ">
+        <div className="flex flex-wrap items-center gap-4 px-4">
+          <span className="text-[#223D38] text-sm whitespace-nowrap">Fast Filters:</span>
+          <div className="flex flex-wrap gap-2">
+            <button className="bg-[#223D38] text-orange-200 py-2 px-16 rounded-full text-sm hover:bg-orange-200 hover:text-white transition duration-500">
+              NEW ARRIVAL
+            </button>
+            <button className="bg-[#223D38] text-orange-200 py-2 px-16 rounded-full text-sm hover:bg-orange-200 hover:text-white transition duration-500">
+              BEST SELLERS
+            </button>
+            <button className="bg-[#223D38] text-orange-200 py-2 px-16 rounded-full text-sm hover:bg-orange-200 hover:text-white transition duration-500">
+              TRENDING
+            </button>
+            <button className="bg-[#223D38] text-orange-200 py-2 px-16 rounded-full text-sm hover:bg-orange-200 hover:text-white transition duration-500">
+              MEN'S
+            </button>
+            <button className="bg-[#223D38] text-orange-200 py-2 px-16 rounded-full text-sm hover:bg-orange-200 hover:text-white transition duration-500">
+              GIFTS
+            </button>
+          </div>
         </div>
 
-        <div className="flex md:justify-between justify-center items-center mb-10  ">
+        <div className="flex md:justify-between justify-center items-center mb-10 mt-8  ">
           <p className="text-sm  md:block hidden">
             Showing 1–20 of 157 results
           </p>
@@ -204,18 +205,18 @@ const App = () => (
         </div>
       </div>
       <Link to="/CheckOutPage">
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-16 ">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div></Link>
-     
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-16 ">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div></Link>
+
       <div className="bg-[#EFE7DF] flex justify-center  mt-5 mb-5">
-      <button className="bg-[#214344] p-1 px-7 rounded rounded-full text-white">Load More</button>
+        <button className="bg-[#214344] p-1 px-7 rounded rounded-full text-white">Load More</button>
+      </div>
     </div>
-    </div>
-   
+
   </div>
 );
 
-export default App;
+export default ShopPage;

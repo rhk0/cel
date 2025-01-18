@@ -1,8 +1,8 @@
 import React from "react";
-import breslet from "../assets/images/breslet.webp";
-import ring from "../assets/images/ring.webp"
-import earning from "../assets/images/earning.webp"
-const ProductCategories = () => {
+import breslet from "../../assets/images/breslet.webp";
+import ring from "../../assets/images/ring.webp"
+import earning from "../../assets/images/earning.webp"
+const Categories = () => {
   return (
     <div className="bg-[#fef6ec] text-center md:p-5">
       <h1 className="md:text-6xl text-3xl font-semibold text-[#214344] mb-2">
@@ -30,84 +30,84 @@ const ProductCategories = () => {
       <div className="flex justify-center overflow-x-auto snap-x snap-mandatory scrollbar-hide space-x-6 bg-[#214344] py-10 md:p-5 mt-8 rounded">
         <div className="flex flex-nowrap space-x-6">
           {/* Circle 1 (Empty) */}
-          <div className="relative w-20 h-20 md:hidden"></div>
-          <div className="relative w-20 h-20 md:hidden"></div>
-          <div className="relative w-20 h-20 md:hidden"></div>
+          <div className="relative w-36 h-36  md:hidden lg:hidden "></div>
+          <div className="relative w-36 h-36 md:hidden lg:hidden"></div>
+          <div className="relative w-36 h-36 md:hidden lg:hidden"></div>
 
           {/* Circle 4 with Image (Pendants) */}
           <div
-            className="relative w-24 h-24 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-40 lg:h-40 flex items-center justify-center bg-transparent border-2 border-white hover:border-black rounded-full overflow-hidden group snap-center"
+            className="relative w-44 h-44 flex items-center justify-center bg-transparent border-2 border-white hover:border-black rounded-full overflow-hidden group snap-center"
             style={{
               backgroundImage: `url(${earning})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
-            <div className="absolute w-16 h-8 sm:w-14 sm:h-8 md:w-20 md:h-10 bg-darkGreen bg-opacity-40 rounded-md backdrop-blur-md flex items-center justify-center border-2 border-white shadow-[inset_0_0_10px_rgba(255,255,0,0.5)]">
+            <div className="absolute w-28 h-16 sm:w-28 sm:h-16 md:w-28 md:h-16 bg-darkGreen bg-opacity-40 rounded-md backdrop-blur-md flex items-center justify-center border-2 border-white shadow-[inset_0_0_10px_rgba(255,255,0,0.5)]">
               <span className="text-white sm:text-xs md:text-sm lg:text-base font-bold opacity-0 group-hover:opacity-100 transition-all duration-300">
-                Pendants
+                Earrings
               </span>
             </div>
           </div>
           <div
-            className="relative w-24 h-24 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-40 lg:h-40 flex items-center justify-center bg-transparent border-2 border-white hover:border-black rounded-full overflow-hidden group snap-center"
+            className="relative w-44 h-44 flex items-center justify-center bg-transparent border-2 border-white hover:border-black rounded-full overflow-hidden group snap-center"
             style={{
               backgroundImage: `url(${earning})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
-            <div className="absolute w-16 h-8 sm:w-14 sm:h-8 md:w-20 md:h-10 bg-darkGreen bg-opacity-40 rounded-md backdrop-blur-md flex items-center justify-center border-2 border-white shadow-[inset_0_0_10px_rgba(255,255,0,0.5)]">
-              <span className="text-white sm:text-xs md:text-sm lg:text-base font-bold opacity-0 group-hover:opacity-100 transition-all duration-300">
-                Pendants
-              </span>
-            </div>
-          </div>
-
-          {/* Circle 5 with Image (Necklaces) */}
-          <div
-            className="relative w-24 h-24 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-40 lg:h-40 flex items-center justify-center bg-white border-2 border-gray-200 hover:border-black rounded-full overflow-hidden group snap-center"
-            style={{
-              backgroundImage: `url(${ring})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="absolute w-16 h-8 sm:w-14 sm:h-8 md:w-20 md:h-10 bg-darkGreen bg-opacity-40 rounded-md backdrop-blur-md flex items-center justify-center border-2 border-white shadow-[inset_0_0_10px_rgba(255,255,0,0.5)]">
-              <span className="text-[#214344] sm:text-xs md:text-sm lg:text-base font-bold opacity-0 group-hover:opacity-100 transition-all duration-300">
-                Necklaces
-              </span>
-            </div>
-          </div>
-
-          {/* Circle 2 with Image (Bracelets) */}
-          <div
-            className="relative w-24 h-24 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-40 lg:h-40 flex items-center justify-center bg-transparent border-2 border-white hover:border-black rounded-full overflow-hidden group snap-center"
-            style={{
-              backgroundImage: `url(${breslet})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="absolute w-16 h-8 sm:w-14 sm:h-8 md:w-20 md:h-10 bg-darkGreen bg-opacity-40 rounded-md backdrop-blur-md flex items-center justify-center border-2 border-white shadow-[inset_0_0_10px_rgba(255,255,0,0.5)]">
+            <div className="absolute w-28 h-16 sm:w-28 sm:h-16 md:w-28 md:h-16 bg-darkGreen bg-opacity-40 rounded-md backdrop-blur-md flex items-center justify-center border-2 border-white shadow-[inset_0_0_10px_rgba(255,255,0,0.5)]">
               <span className="text-white sm:text-xs md:text-sm lg:text-base font-bold opacity-0 group-hover:opacity-100 transition-all duration-300">
                 Bracelets
               </span>
             </div>
           </div>
 
-          {/* Circle 3 with Image (Rings) */}
+          {/* Circle 5 with Image (Necklaces) */}
           <div
-            className="relative w-24 h-24 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-40 lg:h-40 flex items-center justify-center bg-white border-2 border-white hover:border-black rounded-full overflow-hidden group snap-center"
+            className="relative w-44 h-44   flex items-center justify-center bg-white border-2 border-gray-200 hover:border-black rounded-full overflow-hidden group snap-center"
             style={{
               backgroundImage: `url(${ring})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           >
-            <div className="absolute w-16 h-8 sm:w-14 sm:h-8 md:w-20 md:h-10 bg-darkGreen bg-opacity-40 rounded-md backdrop-blur-md flex items-center justify-center border-2 border-gray-200 shadow-[inset_0_0_10px_rgba(255,255,0,0.5)]">
+            <div className="absolute w-28 h-16 sm:w-28 sm:h-16 md:w-28 md:h-16 bg-darkGreen bg-opacity-40 rounded-md backdrop-blur-md flex items-center justify-center border-2 border-white shadow-[inset_0_0_10px_rgba(255,255,0,0.5)]">
               <span className="text-[#214344] sm:text-xs md:text-sm lg:text-base font-bold opacity-0 group-hover:opacity-100 transition-all duration-300">
                 Rings
+              </span>
+            </div>
+          </div>
+
+          {/* Circle 2 with Image (Bracelets) */}
+          <div
+            className="relative w-44 h-44   flex items-center justify-center bg-transparent border-2 border-white hover:border-black rounded-full overflow-hidden group snap-center"
+            style={{
+              backgroundImage: `url(${breslet})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="absolute w-28 h-16 sm:w-28 sm:h-16 md:w-28 md:h-16 bg-darkGreen bg-opacity-40 rounded-md backdrop-blur-md flex items-center justify-center border-2 border-white shadow-[inset_0_0_10px_rgba(255,255,0,0.5)]">
+              <span className="text-white sm:text-xs md:text-sm lg:text-base font-bold opacity-0 group-hover:opacity-100 transition-all duration-300">
+                Pendants
+              </span>
+            </div>
+          </div>
+
+          {/* Circle 3 with Image (Rings) */}
+          <div
+            className="relative w-44 h-44   flex items-center justify-center bg-white border-2 border-white hover:border-black rounded-full overflow-hidden group snap-center"
+            style={{
+              backgroundImage: `url(${ring})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="absolute w-28 h-16 sm:w-28 sm:h-16 md:w-28 md:h-16 bg-darkGreen bg-opacity-40 rounded-md backdrop-blur-md flex items-center justify-center border-2 border-gray-200 shadow-[inset_0_0_10px_rgba(255,255,0,0.5)]">
+              <span className="text-[#214344] sm:text-xs md:text-sm lg:text-base font-bold opacity-0 group-hover:opacity-100 transition-all duration-300">
+                Necklaces
               </span>
             </div>
           </div>
@@ -117,4 +117,4 @@ const ProductCategories = () => {
   );
 };
 
-export default ProductCategories;
+export default Categories;

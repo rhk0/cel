@@ -18,7 +18,7 @@ const products = [
     sold: 0,
     available: 1,
     image:
-      "https://zoci.in/wp-content/uploads/2024/08/P02047-scaled-980x980.webp", // Replace with actual image path
+      "https://zoci.in/wp-content/uploads/2024/08/1724584534256-78cee4aab609e2bc5758-0191893f6c617aa8bb1a40c16c1ddd9aoriginalmedium-500x500.png", // Replace with actual image path
   },
   {
     id: 2,
@@ -60,19 +60,20 @@ const ProductCard = ({ product }) => (
       />
 
       {/*Heart Icon - Always Visible */}
-      <button className="absolute top-3 right-3 text-[#f0d5a0] p-1 rounded-full">
-        <FaRegHeart className="w-5 h-5 ml-3" />
+      <button className="absolute top-3 right-3 text-[#f0d5a0] bg-[#214344] p-1 rounded-full">
+        <FaRegHeart className="w-5 h-5" />
       </button>
 
+
       {/* Other Icons - Visible on Hover */}
-      <div className="absolute top-12 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col">
+      <div className="absolute top-12 right-3  opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col">
         {/* Eye Icon */}
 
         {/* Reload Icon */}
-        <button className="text-[#f0d5a0] hover:text-gray-300">
+        <button className="text-[#f0d5a0] hover:text-gray-300 mb-2 bg-[#214344] p-1 rounded-full ">
           <LuRefreshCcw className="w-5 h-5" />
         </button>
-        <button className="text-[#f0d5a0] hover:text-gray-300">
+        <button className="text-[#f0d5a0] hover:text-gray-300 bg-[#214344] p-1 rounded-full">
           <FaEye className="w-5 h-5" />
         </button>
       </div>
@@ -104,23 +105,23 @@ const ProductCard = ({ product }) => (
         </div>
       </div>
     </div>
-        
+
   </div>
 );
 
 const CheckOutPage = () => {
   const [selectedImage, setSelectedImage] = useState(
-    "https://zoci.in/wp-content/uploads/2024/08/P02546-1-scaled-980x980.webp"
+    "https://zoci.in/wp-content/uploads/2024/08/B03392-scaled-980x980.webp"
   ); // Default selected image
   const [selected, setSelected] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
   // Array of thumbnail images
   const thumbnails = [
-    "https://zoci.in/wp-content/uploads/2024/08/P02546-1-scaled-980x980.webp",
+    "https://zoci.in/wp-content/uploads/2024/08/B03392-scaled-980x980.webp",
 
-    "https://zoci.in/wp-content/uploads/2024/10/mPR3rPVB_out0008-980x980.jpg",
-    "https://zoci.in/wp-content/uploads/2024/08/1724670473526-cdd60a9dd099b4880a5a-01918e5eb0db76648dcd2ef71a02f86foriginalmedium-980x980.png",
+    "https://zoci.in/wp-content/uploads/2024/08/1724588380874-82087d6516bb56267213-01918979fb327aa8bb1c4cdd264a6fd5originalmedium-1-980x735.png ",
+    "https://zoci.in/wp-content/uploads/2024/08/1724582173854-01b4aacc2af9caaeed85-0191891b22d37aa8bb19a68091c0bec4originalmedium-500x500.png",
   ];
 
   const options = [
@@ -182,14 +183,16 @@ const CheckOutPage = () => {
             {/* Breadcrumb */}
             <p className="text-xs mb-2">
               HOME <span className="mx-2"> </span> PENDENTS{" "}
-              <span className="mx-2"> </span> Evil Eye Necklace
+              <span className="mx-2"> </span> Tennis bracelet with a floral twist
+
             </p>
 
             {/* Title and Price */}
-            <h1 className="text-3xl font-semibold mb-2">Evil Eye Necklace</h1>
+            <h1 className="text-3xl font-bold mb-2">Tennis bracelet with a floral twist
+            </h1>
             <div className="flex gap-2 mb-4 justify-between">
               <p className="text-xl font-semibold text-gray-800 mb-2">
-                ₹4,000.00
+                ₹7,400.00
               </p>
               <span
                 className="bg-white px-3 py-2 rounded-full text-center block "
@@ -256,18 +259,18 @@ const CheckOutPage = () => {
 
             {/* Stock Info */}
             <p className="mt-6 text-black text-sm bg-[#FFFCF2]  px-2 py-2 rounded-full">
-              <button className="text-[#F0D5A0] w-6 h-6 hover:text-gray-300">
+              <button className="text-[#C28E00] w-6 h-6 hover:text-gray-300 py-[4px]">
                 <RiShoppingBagLine className="w-6 h-6" />
               </button>{" "}
               6 people have this in their carts right now. It's running out!
             </p>
 
             {/* Additional Information */}
-            <div className="mt-8">
+            <div className="mt-8 ">
               <select
                 name="metalColor"
                 id="metalColor"
-                className="mt-2 p-2 border rounded-full w-full sm:w-80 md:w-96 lg:w-full transition-all duration-300 ease-in-out"
+                className="mt-2 p-2 border rounded-full w-full sm:w-80 md:w-96 lg:w-full transition-all duration-300 ease-in-out mb-4"
                 style={{ transitionDuration: "0.5s" }}
               >
                 <option value="">Additional Information</option>
@@ -290,21 +293,21 @@ const CheckOutPage = () => {
                 {/* Dropdown Content */}
                 {isOpen && (
                   <div className="absolute left-0 bottom-full mb-2 md:top-full md:mt-2 w-full border border-gray-300 rounded rounded-3xl shadow-lg bg-white md:bg-white relative">
-                  {/* Mobile View Arrow */}
-                  
-              
-                  {options.map((option) => (
+                    {/* Mobile View Arrow */}
+
+
+                    {options.map((option) => (
                       <div
-                          key={option.value}
-                          onClick={() => handleSelect(option.value)}
-                          className="px-4 py-2 cursor-pointer hover:bg-gray-100 rounded rounded-3xl"
-                          style={{ whiteSpace: "pre-wrap" }}
+                        key={option.value}
+                        onClick={() => handleSelect(option.value)}
+                        className="px-4 py-2 cursor-pointer hover:bg-gray-100 rounded rounded-3xl"
+                        style={{ whiteSpace: "pre-wrap" }}
                       >
-                          {option.label}
+                        {option.label}
                       </div>
-                  ))}
-              </div>
-              
+                    ))}
+                  </div>
+
                 )}
               </div>
             </div>
@@ -334,14 +337,14 @@ const CheckOutPage = () => {
       </div>
 
       <div className="px-10 mt-8">
-    <div className="flex sm:grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4 overflow-x-auto sm:overflow-visible">
-        {products.map((product) => (
+        <div className="flex sm:grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4 overflow-x-auto sm:overflow-visible">
+          {products.map((product) => (
             <div key={product.id} className="flex-shrink-0 w-full sm:w-auto">
-                <ProductCard product={product} />
+              <ProductCard product={product} />
             </div>
-        ))}
-    </div>
-</div>
+          ))}
+        </div>
+      </div>
 
       <div className="bg-[rgb(245 235 228)] p-6 md:p-12 rounded-lg max-w-4xl mx-auto mt-10">
         <h2 className="text-xl font-bold text-black mb-4">Reviews</h2>
